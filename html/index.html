@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="POST.js"></script>
+  <title>카테고리 실시간 확인</title>
+</head>
+<body>
+  <textarea></textarea>
+</body>
+<script>
+  let getService = function(){ // headnote 및 footer에 대한 데이터를 가지고 옵니다. - 초기설정
+        let data = new FormData(); 
+        data.append("service", "test");
+        POST("service", data, function(resp){
+            console.log(resp.status + ':' + resp.data);
+        });
+    }
+</script>
+</html>

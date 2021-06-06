@@ -1,4 +1,5 @@
 # TMproject
+
 텍스트마이닝 프로젝트
 
 주제 : 실시간 카테고리 분류
@@ -19,19 +20,17 @@ Run as administartor
 ```
 conda create --name tmclass-3 python=3.7
 conda activate tmclass-3
-conda install -c conda-forge jpype1=1.1.2 ipykernel Django
-pip install konlpy requests bs4 sklearn
+conda install -c conda-forge jpype1=1.1.2 ipykernel
+pip install konlpy requests bs4 sklearn flask
 ```
-
-
 
 #### How to use it? ( 사용 방법 )
 
-```
+###### service.py 실행
 
 ```
-
-
+py service.py
+```
 
 #### Author
 
@@ -43,4 +42,3 @@ pip install konlpy requests bs4 sklearn
 
 - H 교수님 자료
 - 블로그 포스트의 자동 분류 시스템, 제 25회 한글 및 한국어 정보처리 학술대회 논문집 (2013년)
-
