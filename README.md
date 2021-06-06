@@ -38,6 +38,12 @@ py service.py
 - Ikjun Jin, @ikju1117
 - Hyosun Yang, @didgytjs
 
+### Conclusion
+
+![image](https://user-images.githubusercontent.com/36920367/120932912-af673180-c732-11eb-84df-0009a4519d81.png)
+
+공부 좀만 더 열심히 할껄...
+
 #### Reference
 
 - H 교수님 자료
