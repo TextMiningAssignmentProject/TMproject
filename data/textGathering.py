@@ -21,5 +21,5 @@ def saveFileCorpus(folder):
 
 datas = "IT컴퓨터 건강의학 게임 문화책 미술디자인공연전시 사회정치 스포츠 애완반려동물 여행 영화 요리레시피맛집 육아결혼 음악 인테리어 자동차 패션미용"
 datas = datas.split()
-for d in datas:
-    saveFileCorpus(d)
+# for d in datas:
+#    saveFileCorpus(d)
