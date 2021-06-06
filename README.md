@@ -6,7 +6,7 @@
 
 프로젝트 이름 : 너의 주제를 알라
 
-설명 : 현재 작성하는 글이 어떤 주제를 띄고 있는지 실시간으로 확인 시켜줍니다. 해당 프로젝트는 교내에서 기말고사 대체 프로젝트이며, 좋은 성능은 기대하지마세요.
+설명 : 현재 작성하는 글이 어떤 주제를 띄고 있는지 실시간으로 확인 시켜줍니다. 해당 프로젝트는 교내에서 기말고사 대체 프로젝트이며, 좋은 성능은 기대하지마세요. T_T
 
 ### Requirement Software
 
@@ -31,6 +31,10 @@ pip install konlpy requests bs4 sklearn flask
 ```
 py service.py
 ```
+
+실행 이후 http://localhost:5000/ 접속하여 다음 사진과 같이 텍스트를 입력하거나, 복사 붙여넣기하여 현재 작성한 문서가 어떠한 주제를 띄고 있는지 확인 가능!
+
+![image](https://user-images.githubusercontent.com/36920367/120936631-c6624f80-c743-11eb-8f3a-47d7c8ebd9a7.png)
 
 #### Author
 
