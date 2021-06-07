@@ -21,7 +21,7 @@ Run as administartor
 conda create --name tmclass-3 python=3.7
 conda activate tmclass-3
 conda install -c conda-forge jpype1=1.1.2 ipykernel
-pip install konlpy requests bs4 sklearn flask
+pip install konlpy requests bs4 sklearn flask tensorflow
 ```
 
 #### How to use it? ( 사용 방법 )

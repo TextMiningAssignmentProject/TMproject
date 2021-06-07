@@ -20,19 +20,44 @@
   </header>
   <section>
     <textarea placeholder="텍스트를 복사 붙여 넣기 하거나 입력하세요."></textarea>
+    <div style="text-align: right; margin-top : 5px;">
+      <p><span id="textLen">0</span> 글자&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <br><br>
+    <div id="categoryID" style="text-align: center; font-weight: bold; font-size : 40px;"></div>
   </section>
   <footer>
-    © Copyright 2021 Yonghoon Jung, ikjun Jin, Hyosun Yang. All rights reserved.
+    © Copyright 2021 Yonghoon Jung, Ikjun Jin, Hyosun Yang. All rights reserved.
   </footer>
 </body>
 <script>
-  let getService = function(){ // headnote 및 footer에 대한 데이터를 가지고 옵니다. - 초기설정
+  let textLenP = document.querySelector("#textLen");
+  let text = document.querySelector("textarea");
+  let textLenOld = 0;
+  text.addEventListener('input', ()=>{
+    textLenP.innerHTML = text.value.length;
+    if ( getServiceConfig == "enable" && textLenOld != text.value.length ){
+      getService(); // get category
+    }
+    textLenOld = text.value.length;
+  });
+  let getServiceConfig = "enable";
+  let category = ["animal", "art", "beauty", "book", "car", "computer", "cook", "decoration", "game", "health", "marry", "movie", "music", "social", "sport", "travel"]
+  let getService = function(){ 
         let data = new FormData(); 
-        data.append("service", "test");
+        getServiceConfig = "disable";
+        data.append("service", "send");
+        data.append("text", text.value)
         POST("service", data, function(resp){
             console.log(resp.status + ':' + resp.data);
+            let n = resp.data.output[0];
+            setOnScreen(category[n]);
+            getServiceConfig = "enable";
         });
     }
+  function setOnScreen(text){
+    document.querySelector("#categoryID").innerHTML = text;
+  }
   
   function githublink(){
     window.location.href = "https://github.com/TextMiningAssignmentProject/TMproject";
