@@ -1,1 +1,4 @@
-model filter=lfs diff=lfs merge=lfs -text
+model/ filter=lfs diff=lfs merge=lfs -text
+model/CNN.h5 filter=lfs diff=lfs merge=lfs -text
+model/predictor.py filter=lfs diff=lfs merge=lfs -text
+model/word_index filter=lfs diff=lfs merge=lfs -text
